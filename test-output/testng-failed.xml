@@ -4,12 +4,12 @@
   <listeners>
     <listener class-name="com.qa.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Pixel_5(failed)">
+  <test thread-count="5" parallel="tests" name="Pixel_7(failed)">
     <parameter name="emulator" value="true"/>
     <parameter name="chromeDriverPort" value="11000"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="udid" value="emulator-5554"/>
-    <parameter name="deviceName" value="Pixel_7"/>
+    <parameter name="deviceName" value="Pixel_7_API_28"/>
     <parameter name="systemPort" value="10000"/>
     <classes>
       <class name="com.qa.tests.LoginTests">
@@ -40,11 +40,11 @@
           <include name="beforeMethod"/>
           <include name="afterSuite"/>
           <include name="beforeMethod"/>
-          <include name="validateProductOnProductDetailsPage"/>
           <include name="afterMethod"/>
+          <include name="validateProductOnProductDetailsPage"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.qa.tests.ProductTests -->
     </classes>
-  </test> <!-- Pixel_5(failed) -->
+  </test> <!-- Pixel_7(failed) -->
 </suite> <!-- Failed suite [Suite] -->

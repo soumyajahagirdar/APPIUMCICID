@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,  5 skipped,  </span>
+                    <span class="method-stats">5 methods, 2 failed,  3 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTests" class="method navigator-link" hash-for-method="validateProductOnProductDetailsPage">validateProductOnProductDetailsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTests" class="method navigator-link" hash-for-method="validateProductOnProductsPage">validateProductOnProductsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -116,16 +135,6 @@
                         <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTests" class="method navigator-link" hash-for-method="validateProductOnProductDetailsPage">validateProductOnProductDetailsPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTests" class="method navigator-link" hash-for-method="validateProductOnProductsPage">validateProductOnProductsPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
@@ -138,6 +147,64 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.tests.ProductTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateProductOnProductDetailsPage">
+                  </a> <!-- validateProductOnProductDetailsPage -->
+                  <span class="method-name">validateProductOnProductDetailsPage</span>
+                  <div class="stack-trace">java.lang.NoSuchMethodError: &apos;net.bytebuddy.matcher.ElementMatcher$Junction net.bytebuddy.matcher.ElementMatchers.namedOneOf(java.lang.String[])&apos;
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:91)
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:70)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:258)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:157)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:61)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:30)
+	at com.qa.tests.ProductTests.validateProductOnProductDetailsPage(ProductTests.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateProductOnProductsPage">
+                  </a> <!-- validateProductOnProductsPage -->
+                  <span class="method-name">validateProductOnProductsPage</span>
+                  <div class="stack-trace">java.lang.NoSuchMethodError: &apos;net.bytebuddy.matcher.ElementMatcher$Junction net.bytebuddy.matcher.ElementMatchers.namedOneOf(java.lang.String[])&apos;
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:91)
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:70)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:258)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:157)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:61)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:30)
+	at com.qa.tests.ProductTests.validateProductOnProductsPage(ProductTests.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -149,30 +216,23 @@
                   <a name="invalidPassword">
                   </a> <!-- invalidPassword -->
                   <span class="method-name">invalidPassword</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
-Host info: host: &apos;LAPTOP-N6849G24&apos;, ip: &apos;192.168.1.144&apos;
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{platformName=ANDROID, appium:chromeDriverPort=11000, appium:systemPort=10000, appium:avd=Pixel_7, appium:appActivity=com.swaglabsmobileapp.SplashActivity, appium:deviceName=Pixel_7, appium:app=C:\Users\excel\eclipse-workspace\TDDFramework\src\test\resources\app\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk, appium:appPackage=com.swaglabsmobileapp, appium:avdLaunchTimeout=120000, appium:udid=emulator-5554, appium:automationName=UiAutomator2}], desiredCapabilities=Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
-Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:116)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at com.qa.BaseTest.beforeTest(BaseTest.java:270)
+                  <div class="stack-trace">java.lang.NoSuchMethodError: &apos;net.bytebuddy.matcher.ElementMatcher$Junction net.bytebuddy.matcher.ElementMatchers.namedOneOf(java.lang.String[])&apos;
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:91)
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:70)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:258)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:157)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:61)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:30)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 18 stack frames
+... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -181,30 +241,23 @@ Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobi
                   <a name="invalidUserName">
                   </a> <!-- invalidUserName -->
                   <span class="method-name">invalidUserName</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
-Host info: host: &apos;LAPTOP-N6849G24&apos;, ip: &apos;192.168.1.144&apos;
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{platformName=ANDROID, appium:chromeDriverPort=11000, appium:systemPort=10000, appium:avd=Pixel_7, appium:appActivity=com.swaglabsmobileapp.SplashActivity, appium:deviceName=Pixel_7, appium:app=C:\Users\excel\eclipse-workspace\TDDFramework\src\test\resources\app\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk, appium:appPackage=com.swaglabsmobileapp, appium:avdLaunchTimeout=120000, appium:udid=emulator-5554, appium:automationName=UiAutomator2}], desiredCapabilities=Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
-Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:116)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at com.qa.BaseTest.beforeTest(BaseTest.java:270)
+                  <div class="stack-trace">java.lang.NoSuchMethodError: &apos;net.bytebuddy.matcher.ElementMatcher$Junction net.bytebuddy.matcher.ElementMatchers.namedOneOf(java.lang.String[])&apos;
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:91)
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:70)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:258)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:157)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:61)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:30)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 18 stack frames
+... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -213,102 +266,23 @@ Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobi
                   <a name="successfulLogin">
                   </a> <!-- successfulLogin -->
                   <span class="method-name">successfulLogin</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
-Host info: host: &apos;LAPTOP-N6849G24&apos;, ip: &apos;192.168.1.144&apos;
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{platformName=ANDROID, appium:chromeDriverPort=11000, appium:systemPort=10000, appium:avd=Pixel_7, appium:appActivity=com.swaglabsmobileapp.SplashActivity, appium:deviceName=Pixel_7, appium:app=C:\Users\excel\eclipse-workspace\TDDFramework\src\test\resources\app\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk, appium:appPackage=com.swaglabsmobileapp, appium:avdLaunchTimeout=120000, appium:udid=emulator-5554, appium:automationName=UiAutomator2}], desiredCapabilities=Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
-Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:116)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at com.qa.BaseTest.beforeTest(BaseTest.java:270)
+                  <div class="stack-trace">java.lang.NoSuchMethodError: &apos;net.bytebuddy.matcher.ElementMatcher$Junction net.bytebuddy.matcher.ElementMatchers.namedOneOf(java.lang.String[])&apos;
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:91)
+	at io.appium.java_client.pagefactory.utils.ProxyFactory.getEnhancedProxy(ProxyFactory.java:70)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.proxyForAnElement(AppiumFieldDecorator.java:258)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator$1.proxyForLocator(AppiumFieldDecorator.java:157)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:61)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:30)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.qa.tests.ProductTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateProductOnProductDetailsPage">
-                  </a> <!-- validateProductOnProductDetailsPage -->
-                  <span class="method-name">validateProductOnProductDetailsPage</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
-Host info: host: &apos;LAPTOP-N6849G24&apos;, ip: &apos;192.168.1.144&apos;
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{platformName=ANDROID, appium:chromeDriverPort=11000, appium:systemPort=10000, appium:avd=Pixel_7, appium:appActivity=com.swaglabsmobileapp.SplashActivity, appium:deviceName=Pixel_7, appium:app=C:\Users\excel\eclipse-workspace\TDDFramework\src\test\resources\app\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk, appium:appPackage=com.swaglabsmobileapp, appium:avdLaunchTimeout=120000, appium:udid=emulator-5554, appium:automationName=UiAutomator2}], desiredCapabilities=Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
-Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:116)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at com.qa.BaseTest.beforeTest(BaseTest.java:270)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateProductOnProductsPage">
-                  </a> <!-- validateProductOnProductsPage -->
-                  <span class="method-name">validateProductOnProductsPage</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource 
-Host info: host: &apos;LAPTOP-N6849G24&apos;, ip: &apos;192.168.1.144&apos;
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{platformName=ANDROID, appium:chromeDriverPort=11000, appium:systemPort=10000, appium:avd=Pixel_7, appium:appActivity=com.swaglabsmobileapp.SplashActivity, appium:deviceName=Pixel_7, appium:app=C:\Users\excel\eclipse-workspace\TDDFramework\src\test\resources\app\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk, appium:appPackage=com.swaglabsmobileapp, appium:avdLaunchTimeout=120000, appium:udid=emulator-5554, appium:automationName=UiAutomator2}], desiredCapabilities=Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
-Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, automationName: UiAutomator2, avd: Pixel_7, avdLaunchTimeout: 120000, chromeDriverPort: 11000, deviceName: Pixel_7, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:116)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at com.qa.BaseTest.beforeTest(BaseTest.java:270)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 18 stack frames
+... Removed 21 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -327,18 +301,18 @@ Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobi
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.qa.listeners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Pixel_5&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Pixel_7&quot;&gt;
     &lt;parameter name=&quot;emulator&quot; value=&quot;true&quot;/&gt;
     &lt;parameter name=&quot;chromeDriverPort&quot; value=&quot;11000&quot;/&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
     &lt;parameter name=&quot;udid&quot; value=&quot;emulator-5554&quot;/&gt;
-    &lt;parameter name=&quot;deviceName&quot; value=&quot;Pixel_7&quot;/&gt;
+    &lt;parameter name=&quot;deviceName&quot; value=&quot;Pixel_7_API_28&quot;/&gt;
     &lt;parameter name=&quot;systemPort&quot; value=&quot;10000&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.tests.LoginTests&quot;/&gt;
       &lt;class name=&quot;com.qa.tests.ProductTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Pixel_5 --&gt;
+  &lt;/test&gt; &lt;!-- Pixel_7 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -350,7 +324,7 @@ Capabilities {app: C:\Users\excel\eclipse-work..., appActivity: com.swaglabsmobi
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Pixel_5 (2 classes)</span>
+                <span class="test-name">Pixel_7 (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -378,30 +352,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'successfulLogin')
-data.setCell(0, 2, 'com.qa.tests.LoginTests')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'validateProductOnProductsPage')
+data.setCell(0, 2, 'com.qa.tests.ProductTests')
+data.setCell(0, 3, 4);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateProductOnProductsPage')
+data.setCell(1, 1, 'validateProductOnProductDetailsPage')
 data.setCell(1, 2, 'com.qa.tests.ProductTests')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 4);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'invalidUserName')
+data.setCell(2, 1, 'invalidPassword')
 data.setCell(2, 2, 'com.qa.tests.LoginTests')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateProductOnProductDetailsPage')
-data.setCell(3, 2, 'com.qa.tests.ProductTests')
+data.setCell(3, 1, 'invalidUserName')
+data.setCell(3, 2, 'com.qa.tests.LoginTests')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'invalidPassword')
+data.setCell(4, 1, 'successfulLogin')
 data.setCell(4, 2, 'com.qa.tests.LoginTests')
 data.setCell(4, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 681 ms</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -412,6 +386,20 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateProductOnProductsPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">This is the sample screenshot</span>
+                <span class="reporter-method-output"><a href='C:\Users\excel\eclipse-workspace\TDDFramework\Screenshots\Android_Pixel_7_API_28\2024-06-03-23-23-31\ProductTests\validateProductOnProductsPage.png'> <img src='C:\Users\excel\eclipse-workspace\TDDFramework\Screenshots\Android_Pixel_7_API_28\2024-06-03-23-23-31\ProductTests\validateProductOnProductsPage.png' height='400' width='400'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateProductOnProductDetailsPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">This is the sample screenshot</span>
+                <span class="reporter-method-output"><a href='C:\Users\excel\eclipse-workspace\TDDFramework\Screenshots\Android_Pixel_7_API_28\2024-06-03-23-23-31\ProductTests\validateProductOnProductDetailsPage.png'> <img src='C:\Users\excel\eclipse-workspace\TDDFramework\Screenshots\Android_Pixel_7_API_28\2024-06-03-23-23-31\ProductTests\validateProductOnProductDetailsPage.png' height='400' width='400'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -422,11 +410,11 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.qa.tests.ProductTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSuite</span>
+                <span class="ignored-method-name">beforeTest</span>
                 <br/>
                 <span class="ignored-method-name">beforeSuite</span>
                 <br/>
-                <span class="ignored-method-name">beforeTest</span>
+                <span class="ignored-method-name">afterSuite</span>
                 <br/>
                 <span class="ignored-method-name">afterTest</span>
                 <br/>
@@ -446,18 +434,104 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
+                <span class="method-name">beforeTest(true, Android, emulator-5554, Pixel_7_API_28, 10000, 11000, iOSOnly, iOSOnly)</span>
+                <span class="method-start">1847 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">10658 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">10686 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">beforeTest(true, Android, emulator-5554, Pixel_7, 10000, 11000, iOSOnly, iOSOnly)</span>
-                <span class="method-start">1932 ms</span>
-              </div> <!-- configuration-test before -->
+                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidPassword())</span>
+                <span class="method-start">11625 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">14856 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">14858 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">14876 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">14879 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tests.ProductTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14912 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">14918 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.qa.tests.ProductTests.validateProductOnProductDetailsPage())</span>
+                <span class="method-start">17642 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateProductOnProductDetailsPage</span>
+                <span class="method-start">19725 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">22802 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=validateProductOnProductDetailsPage status=FAILURE method=ProductTests.validateProd...)</span>
+                <span class="method-start">22803 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">23980 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.qa.tests.ProductTests.validateProductOnProductsPage())</span>
+                <span class="method-start">24698 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateProductOnProductsPage</span>
+                <span class="method-start">27502 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">31683 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=validateProductOnProductsPage status=FAILURE method=ProductTests.validateProductOnP...)</span>
+                <span class="method-start">31684 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">33133 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">2609 ms</span>
+                <span class="method-start">33136 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">2943 ms</span>
+                <span class="method-start">35226 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
